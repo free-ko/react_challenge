@@ -37,17 +37,18 @@ const Cover = styled.div`
   background-image: url(${(props) => props.bgImage});
   background-position: center center;
   background-size: cover;
-  height: 100%;
-  border-radius: 5px;
+  height: 80%;
+  border-radius: 8px;
 `;
 
 const Data = styled.div`
   width: 70%;
-  margin-left: 10px;
+  margin-left: 3vw;
+  font-size: 18px;
 `;
 
 const Title = styled.h3`
-  font-size: 32px;
+  font-size: 38px;
 `;
 
 const ItemContainer = styled.div`
@@ -85,6 +86,7 @@ const DetailPresenter = ({ result, loading, error }) =>
         />
         <Data>
           <Title>
+            🎞
             {result.original_title
               ? result.original_title
               : result.original_name}
@@ -93,7 +95,8 @@ const DetailPresenter = ({ result, loading, error }) =>
             <Item>
               {result.release_date
                 ? result.release_date.substring(0, 4)
-                : result.first_air_date.substring(0, 4)}
+                : result.first_air_date.substring(0, 4)}{" "}
+              year
             </Item>
             <Divider>•</Divider>
             <Item>

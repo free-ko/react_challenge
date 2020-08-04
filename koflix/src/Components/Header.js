@@ -34,6 +34,11 @@ const SLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  transition: opacity 0.2s ease-in;
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export default withRouter(({ location: { pathname } }) => (
